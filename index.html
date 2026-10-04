@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8K STRONG ORIGINAL IPTV | L'Ultime Expérience</title>
+
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="Découvrez 8K STRONG ORIGINAL IPTV, l'ultime expérience de streaming avec une qualité 8K, 4K et FHD. Profitez de milliers de chaînes, films et séries sans coupure.">
+    <meta name="keywords" content="IPTV, 8K IPTV, STRONG IPTV, abonnement iptv, streaming, films, séries, 4K, sans coupure">
+    <meta name="author" content="8K STRONG IPTV">
+
+    <!-- Favicon (Logo li kiban lfo9 f tab dyal navigateur) -->
+    <link rel="icon" type="image/png" href="img/8k logo.webp">
+
+    <!-- Open Graph (Bach yban logo w description f Google w WhatsApp/Facebook) -->
+    <meta property="og:title" content="8K STRONG ORIGINAL IPTV | L'Ultime Expérience">
+    <meta property="og:description" content="L'ultime expérience de streaming avec 8K STRONG ORIGINAL IPTV. Qualité 8K, films et séries mondiales sans coupure.">
+    <meta property="og:image" content="https://www.lien-dyal-site-dyalk.com/img/8k logo.webp">
+    <meta property="og:url" content="https://www.lien-dyal-site-dyalk.com/">
+    <meta property="og:type" content="website">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#FFCC00', 
+                        'primary-dark': '#E6B800',
+                        'dark': '#050505',
+                        'card-bg': '#111111',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #FFCC00; }
+
+        body { background-color: #050505; color: white; overflow-x: hidden; transition: direction 0.3s; }
+        
+        /* Glass & Glow Effects (Navbar msayba hna) */
+        .glass-nav { 
+            background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, transparent 100%); 
+            backdrop-filter: blur(8px); 
+            border-bottom: none; 
+        }
+        
+        .glass-card { background: linear-gradient(145deg, #111 0%, #0a0a0a 100%); border: 1px solid rgba(255,255,255,0.05); }
+        
+        .btn-glow { position: relative; overflow: hidden; }
+        .btn-glow::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,204,0,0.4) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; }
+        .btn-glow:hover::after { opacity: 1; }
+        .btn-glow:hover { box-shadow: 0 0 20px rgba(255, 204, 0, 0.4); transform: translateY(-2px); }
+
+        .text-gradient { background: linear-gradient(to right, #FFCC00, #FFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Hover Cards */
+        .feature-card { transition: all 0.4s ease; }
+        .feature-card:hover { border-color: #FFCC00; transform: translateY(-10px); box-shadow: 0 10px 30px rgba(255, 204, 0, 0.15); }
+        .feature-icon-wrapper { transition: all 0.4s ease; }
+        .feature-card:hover .feature-icon-wrapper { background-color: #FFCC00; color: #000; transform: scale(1.1) rotate(5deg); }
+
+        /* Animations */
+        .pulse-slow { animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .marquee-container { overflow: hidden; white-space: nowrap; width: 100%; }
+        .marquee-content { display: inline-flex; animation: marquee 25s linear infinite; }
+        .marquee-content:hover { animation-play-state: paused; }
+
+        /* VOD Continuous Swiper */
+        .swiper-continuous .swiper-wrapper { transition-timing-function: linear !important; }
+
+        /* Movie Poster Hover */
+        .movie-card img { transition: transform 0.5s ease, filter 0.5s ease; }
+        .movie-card:hover img { transform: scale(1.1); filter: brightness(0.6); }
+
+        /* FAQ Accordion */
+        .faq-answer { overflow: hidden; transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); color: #FFCC00; }
+        .faq-item.active { border-color: rgba(255, 204, 0, 0.5); }
+        
+        /* Logos styles */
+        .invert-white { filter: brightness(0) invert(1); }
+
+        /* RTL support for Arabic */
+        [dir="rtl"] .text-left { text-align: right; }
+        [dir="rtl"] .ml-2 { margin-left: 0; margin-right: 0.5rem; }
+        [dir="rtl"] .mr-2 { margin-right: 0; margin-left: 0.5rem; }
+    </style>
+</head>
+<body class="antialiased" dir="ltr">
+
+    <!-- FLOATING WHATSAPP BUBBLE -->
+    <div class="fixed bottom-5 right-5 z-[999]">
+        <a href="https://wa.me/212607897541" target="_blank" class="flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white px-4 py-2.5 rounded-full shadow-lg hover:scale-105 transition-all duration-300 group">
+            <i class="fab fa-whatsapp text-2xl animate-pulse"></i>
+            <span class="font-bold text-xs md:text-sm pr-1 tr" data-fr="Support Premium 24/7" data-ar="دعم فني متميز 24/7">Support Premium 24/7</span>
+        </a>
+    </div>
+
+    <!-- NAVBAR PREMIUM -->
+    <nav class="fixed w-full z-50 glass-nav pt-4 pb-6" data-aos="fade-down">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-3 z-50 group cursor-pointer">
+                <!-- 8K LOGO OFFICIEL WAHDOU -->
+                <img src="img/8k logo.webp" alt="8K Logo" class="h-12 invert-white drop-shadow-[0_0_15px_rgba(255,204,0,0.8)] transition-transform duration-300 group-hover:scale-105">
+            </div>
+            
+            <div class="hidden lg:flex items-center gap-8 text-sm font-bold uppercase tracking-wider">
+                <a href="#accueil" class="text-gray-300 hover:text-primary transition tr" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
+                <a href="#features" class="text-gray-300 hover:text-primary transition tr" data-fr="Avantages" data-ar="المميزات">Avantages</a>
+                <a href="#steps-container" class="text-gray-300 hover:text-primary transition tr" data-fr="VOD" data-ar="مكتبة الأفلام">Comment ça marche ?</a>
+                <a href="#plans" class="text-gray-300 hover:text-primary transition tr" data-fr="Abonnements" data-ar="الاشتراكات">Abonnements</a>
+            </div>
+
+            <div class="flex items-center gap-4 z-50">
+                <!-- Traduction Switcher -->
+                <div class="flex items-center gap-2 mr-2 font-bold text-sm bg-black/50 px-3 py-1.5 rounded-full border border-white/10">
+                    <button id="lang-fr" class="text-primary transition hover:text-primary">FR</button>
+                    <span class="text-gray-600">|</span>
+                    <button id="lang-ar" class="text-gray-400 transition hover:text-primary">AR</button>
+                </div>
+
+                <a href="https://wa.me/212607897541" target="_blank" class="hidden sm:flex bg-gradient-to-r from-primary to-primary-dark text-black font-black px-6 py-2.5 rounded-full items-center gap-2 text-sm btn-glow transition-all duration-300">
+                    <i class="fab fa-whatsapp text-xl"></i> <span class="tr" data-fr="Acheter" data-ar="اشتري الآن">Acheter</span>
+                </a>
+                
+                <!-- Hamburger Button -->
+                <button id="hamburgerBtn" class="lg:hidden text-white hover:text-primary transition text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MENU MOBILE -->
+    <div id="mobileMenu" class="fixed inset-0 bg-dark/95 backdrop-blur-xl z-40 transform translate-x-full flex flex-col items-center justify-center gap-8 text-2xl font-bold transition-transform duration-500">
+        <a href="#accueil" class="mobile-link text-white hover:text-primary transition tr" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
+        <a href="#features" class="mobile-link text-white hover:text-primary transition tr" data-fr="Nos Avantages" data-ar="مميزاتنا">Nos Avantages</a>
+        <a href="#steps-container" class="mobile-link text-white hover:text-primary transition tr" data-fr="Films & Séries" data-ar="أفلام ومسلسلات">Comment ça marche ?</a>
+        <a href="#plans" class="mobile-link text-white hover:text-primary transition tr" data-fr="Tarifs" data-ar="الأسعار">Tarifs</a>
+        <a href="#faq" class="mobile-link text-white hover:text-primary transition tr" data-fr="FAQ" data-ar="أسئلة شائعة">FAQ</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="accueil" class="relative pt-32 pb-20 min-h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://i.pinimg.com/736x/f3/f6/98/f3f698d686961444e29cff60ab7eecb0.jpg')] bg-cover bg-center opacity-20"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-dark via-transparent to-dark"></div>
+        <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] pulse-slow"></div>
+
+        <div class="relative z-20 max-w-6xl mx-auto px-4 flex flex-col items-center text-center mt-10">
+            <span class="bg-white/10 border border-white/20 text-white px-5 py-2 rounded-full text-xs font-bold tracking-[0.2em] uppercase mb-8 backdrop-blur-md tr" data-fr="🌟 Le N°1 de l'IPTV au Maroc & Europe" data-ar="🌟 رقم 1 في خدمة الـ IPTV في المغرب وأوروبا" data-aos="fade-down">
+                 Le N°1 de l'IPTV au Maroc & Europe
+            </span>
+            
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-black mb-6 leading-tight tracking-tight" data-aos="zoom-in" data-aos-duration="1000">
+                <span class="tr" data-fr="L'IPTV" data-ar="تلفزيون">L'IPTV</span> <br>
+                <span class="text-gradient tr" data-fr="Sans Limites" data-ar="بلا حدود.">Sans Limites</span>
+            </h1>
+            
+            <p class="text-lg md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto font-light tr" data-fr="Plongez dans l'univers de la 8K & 4K UHD avec la meilleure technologie Anti-Coupure du marché." data-ar="استمتع بعالم الـ 8K و 4K UHD مع أفضل تقنية ضد التقطيع في السوق." data-aos="fade-up" data-aos-delay="200">
+                Plongez dans l'univers de la <strong class="text-white">8K & 4K UHD</strong> avec la meilleure technologie Anti-Coupure du marché.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6 w-full sm:w-auto" data-aos="fade-up" data-aos-delay="400">
+                <a href="#plans" class="bg-primary text-black font-black px-10 py-5 rounded-full flex items-center justify-center gap-3 text-lg btn-glow hover:bg-white transition-colors">
+                   <span class="tr" data-fr="Voir les Abonnements" data-ar="شاهد الاشتراكات">Voir les Abonnements</span>
+                </a>
+                <a href="https://wa.me/212607897541?text=Je%20veux%20un%20test%20gratuit%20de%2024h" target="_blank" class="glass-card text-white font-bold px-10 py-5 rounded-full flex items-center justify-center gap-3 text-lg hover:border-primary transition-colors group">
+                    <i class="fab fa-whatsapp text-green-500 text-2xl group-hover:scale-110 transition-transform"></i> <span class="tr" data-fr="Test 24H Gratuit" data-ar="تجربة مجانية 24 ساعة">Test 24H Gratuit</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGOS MARQUEE SECTION (NEW LOGOS) -->
+    <div class="py-6 bg-[#0a0a0a] border-y border-white/10 marquee-container relative z-10">
+        <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10"></div>
+        <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10"></div>
+        
+        <div class="marquee-content gap-16 items-center opacity-80">
+            <!-- First Set -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="h-8">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg" alt="Prime Video" class="h-8 invert-white">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+" class="h-12 invert-white">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Apple_TV_Plus_Logo.svg" alt="Apple TV+" class="h-8 invert-white">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="HBO Max" class="h-8 invert-white">
+            <img src="img/bein.webp" alt="BeIN Sports" class="h-10 invert-white">
+            
+
+            <!-- Second Set (for infinite scroll illusion) -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="h-8 ml-16">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg" alt="Prime Video" class="h-8 invert-white">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+" class="h-12 invert-white">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Apple_TV_Plus_Logo.svg" alt="Apple TV+" class="h-8 invert-white">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="HBO Max" class="h-8 invert-white">
+            <img src="img/bein.webp" alt="BeIN Sports" class="h-10 invert-white">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/RMC_Sport_2018.svg" alt="RMC Sport" class="h-10 invert-white">
+        </div>
+    </div>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="py-24 bg-dark relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-primary font-bold text-sm tracking-[0.2em] uppercase tr" data-fr="Pourquoi Nous Choisir ?" data-ar="لماذا تختارنا؟">Pourquoi Nous Choisir ?</span>
+                <h2 class="text-4xl md:text-5xl font-black mt-3 tr" data-fr="La Qualité Avant Tout" data-ar="الجودة قبل كل شيء">La Qualité Avant Tout</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-8 rounded-2xl feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center text-primary text-2xl mb-6 feature-icon-wrapper">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 tr" data-fr="Zéro Coupure" data-ar="بدون تقطيع">Zéro Coupure</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed tr" data-fr="Des serveurs ultra-puissants garantissant une stabilité parfaite lors des grands matchs." data-ar="سيرفرات قوية جداً تضمن استقراراً مثالياً خلال المباريات الكبرى.">Des serveurs ultra-puissants garantissant une stabilité parfaite lors des grands matchs.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center text-primary text-2xl mb-6 feature-icon-wrapper">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 tr" data-fr="Qualité 4K & 8K" data-ar="جودة 4K و 8K">Qualité 4K & 8K</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed tr" data-fr="Une qualité d'image exceptionnelle pour une immersion totale dans vos films et séries." data-ar="جودة صورة استثنائية لانغماس كامل في أفلامك ومسلسلاتك.">Une qualité d'image exceptionnelle pour une immersion totale dans vos films et séries.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center text-primary text-2xl mb-6 feature-icon-wrapper">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 tr" data-fr="Multi-Appareils" data-ar="متعدد الأجهزة">Multi-Appareils</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed tr" data-fr="Compatible avec Smart TV, Box Android, Apple TV, PC, et Smartphones." data-ar="متوافق مع التلفزيونات الذكية، أندرويد بوكس، أبل تي في، الحواسيب والهواتف.">Compatible avec Smart TV, Box Android, Apple TV, PC, et Smartphones.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center text-primary text-2xl mb-6 feature-icon-wrapper">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 tr" data-fr="Mise à jour Auto" data-ar="تحديث تلقائي">Mise à jour Auto</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed tr" data-fr="Ajout quotidien de nouveaux films, séries et chaînes sans aucune intervention de votre part." data-ar="إضافة يومية لأفلام ومسلسلات وقنوات جديدة بدون أي تدخل منك.">Ajout quotidien de nouveaux films, séries et chaînes sans aucune intervention de votre part.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTIQUES -->
+    <section class="py-10 bg-gradient-to-r from-gray-100 via-white to-gray-100 text-black relative z-10 border-y border-gray-200" id="stats-section">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div data-aos="zoom-in" data-aos-delay="100" class="hover:scale-105 transition-transform duration-300">
+                <h3 class="text-4xl md:text-5xl font-black mb-1 text-dark"><span class="counter" data-target="60">0</span>K+</h3>
+                <p class="font-bold uppercase tracking-widest text-gray-600 text-sm tr" data-fr="Chaînes TV" data-ar="قنوات تلفزيونية">Chaînes TV</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="200" class="hover:scale-105 transition-transform duration-300 border-y md:border-y-0 md:border-x border-gray-300 py-6 md:py-0">
+                <h3 class="text-4xl md:text-5xl font-black mb-1 text-dark"><span class="counter" data-target="200">0</span>K+</h3>
+                <p class="font-bold uppercase tracking-widest text-gray-600 text-sm tr" data-fr="Films (VOD)" data-ar="أفلام (VOD)">Films (VOD)</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300" class="hover:scale-105 transition-transform duration-300">
+                <h3 class="text-4xl md:text-5xl font-black mb-1 text-dark"><span class="counter" data-target="50">0</span>K+</h3>
+                <p class="font-bold uppercase tracking-widest text-gray-600 text-sm tr" data-fr="Séries" data-ar="مسلسلات">Séries</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS (ANIMATED) -->
+    <section class="py-20 bg-dark relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-primary font-bold text-sm tracking-[0.2em] uppercase tr" data-fr="Simple et Rapide" data-ar="سهل وسريع">Simple et Rapide</span>
+                <h2 class="text-4xl font-black mt-2 tr" data-fr="Comment ça marche ?" data-ar="كيف تعمل الخدمة؟">Comment ça marche ?</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative" id="steps-container">
+                <!-- Line connecting steps (desktop) -->
+                <div class="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-transparent via-primary/50 to-transparent -translate-y-1/2 z-0"></div>
+                
+                <!-- Step 1 -->
+                <div class="step-card active-step relative z-10 flex flex-col items-center text-center transition-all duration-500 transform scale-105 opacity-100">
+                    <div class="step-circle w-16 h-16 rounded-full bg-primary border-2 border-primary flex items-center justify-center text-2xl font-black text-black mb-6 shadow-[0_0_20px_rgba(255,204,0,0.6)] transition-all duration-500">1</div>
+                    <h3 class="text-xl font-bold mb-3 tr" data-fr="Choisissez votre Plan" data-ar="اختر باقتك">Choisissez votre Plan</h3>
+                    <p class="text-gray-400 text-sm tr" data-fr="Sélectionnez l'abonnement qui vous convient ci-dessous." data-ar="اختر الاشتراك الذي يناسبك من الأسفل.">Sélectionnez l'abonnement qui vous convient ci-dessous.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="step-card relative z-10 flex flex-col items-center text-center transition-all duration-500 transform scale-90 opacity-50">
+                    <div class="step-circle w-16 h-16 rounded-full bg-black border-2 border-primary flex items-center justify-center text-2xl font-black text-primary mb-6 shadow-[0_0_20px_rgba(255,204,0,0.3)] transition-all duration-500">2</div>
+                    <h3 class="text-xl font-bold mb-3 tr" data-fr="Contactez-nous" data-ar="تواصل معنا">Contactez-nous</h3>
+                    <p class="text-gray-400 text-sm tr" data-fr="Envoyez-nous un message sur WhatsApp pour le paiement." data-ar="أرسل لنا رسالة عبر واتساب لإتمام الدفع.">Envoyez-nous un message sur WhatsApp pour le paiement.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="step-card relative z-10 flex flex-col items-center text-center transition-all duration-500 transform scale-90 opacity-50">
+                    <div class="step-circle w-16 h-16 rounded-full bg-black border-2 border-primary flex items-center justify-center text-2xl font-black text-primary mb-6 shadow-[0_0_20px_rgba(255,204,0,0.3)] transition-all duration-500">3</div>
+                    <h3 class="text-xl font-bold mb-3 tr" data-fr="Profitez instantanément" data-ar="استمتع فوراً">Profitez instantanément</h3>
+                    <p class="text-gray-400 text-sm tr" data-fr="Recevez vos codes et commencez à regarder." data-ar="احصل على أكوادك وابدأ المشاهدة.">Recevez vos codes et commencez à regarder.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANS (TARIFS) PREMIUM AVEC 24H FREE -->
+    <section id="plans" class="py-24 max-w-[95rem] mx-auto px-4 relative">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[500px] bg-primary/5 blur-[120px] -z-10 rounded-full pointer-events-none"></div>
+
+        <div class="text-center mb-20" data-aos="fade-up">
+            <span class="text-primary font-bold text-sm tracking-[0.2em] uppercase tr" data-fr="Tarifs Accessibles" data-ar="أسعار في المتناول">Tarifs Accessibles</span>
+            <h2 class="text-4xl md:text-5xl font-black mt-3 mb-6"><span class="tr" data-fr="Choisissez Votre" data-ar="اختر">Choisissez Votre</span> <span class="text-gradient tr" data-fr="Abonnement" data-ar="اشتراكك">Abonnement</span></h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            <!-- 24H FREE PLAN -->
+            <div class="glass-card rounded-3xl p-6 flex flex-col hover:border-green-500/50 transition-colors" data-aos="fade-up" data-aos-delay="50">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl font-bold text-green-400 tr" data-fr="TEST 24H" data-ar="تجربة 24 ساعة">TEST 24H</h3>
+                    <div class="mt-4 flex justify-center items-end gap-1">
+                        <span class="text-5xl font-black text-white">0</span>
+                        <span class="text-lg font-bold text-gray-500 mb-1">DH</span>
+                    </div>
+                    <div class="text-sm text-green-500 font-bold mt-2 tr" data-fr="100% Gratuit" data-ar="مجاني 100%">100% Gratuit</div>
+                </div>
+                <div class="space-y-4 mb-8 text-sm text-gray-300 flex-1 font-medium">
+                    <p class="text-xs text-gray-400 text-center mb-4 tr" data-fr="Testez la puissance de nos serveurs avant de vous engager. Qualité 4K/8K, chaînes et VOD incluses." data-ar="جرب قوة سيرفراتنا قبل الاشتراك. جودة 4K/8K، القنوات ومكتبة الأفلام مشمولة.">Testez la puissance de nos serveurs avant de vous engager. Qualité 4K/8K, chaînes et VOD incluses.</p>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> Serveur VIP 24H</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> +60,000 Chaînes TV</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-green-500"></i> VOD (Films/Séries) 8K</div>
+                </div>
+                <a href="https://wa.me/212607897541?text=Je%20veux%20un%20test%20gratuit%20de%2024h" class="w-full py-3 rounded-xl border border-green-500 text-green-500 text-center font-bold hover:bg-green-500 hover:text-black transition-colors flex items-center justify-center gap-2 tr">
+                    <i class="fab fa-whatsapp text-xl"></i> <span data-fr="Tester Gratuitement" data-ar="جرب مجاناً">Tester Gratuitement</span>
+                </a>
+            </div>
+
+            <!-- 1 MOIS -->
+            <div class="glass-card rounded-3xl p-6 flex flex-col hover:border-primary/50 transition-colors" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl font-bold text-gray-300 tr" data-fr="1 MOIS" data-ar="شهر واحد">1 MOIS</h3>
+                    <div class="mt-4 flex justify-center items-end gap-1">
+                        <span class="text-5xl font-black text-white">99</span>
+                        <span class="text-lg font-bold text-gray-500 mb-1">DH</span>
+                    </div>
+                    <div class="text-sm text-gray-500 mt-2 tr" data-fr="Paiement unique" data-ar="دفع مرة واحدة">Paiement unique</div>
+                </div>
+                <div class="space-y-4 mb-8 text-sm text-gray-300 flex-1 font-medium">
+                    <div class="flex items-center gap-3"><i class="fas fa-star text-primary"></i> Serveur VIP Anti-Coupure</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> +60,000 Chaînes TV</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> VOD (Films/Séries) 8K</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> Replay & EPG inclus</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> Support Prioritaire 24/7</div>
+                </div>
+                <a href="https://wa.me/212607897541?text=Bonjour%20!%20Je%20veux%20un%20abonnement%20de%201%20Mois%20(99%20DH)." class="w-full py-3 rounded-xl bg-primary/10 border border-primary text-primary hover:bg-primary hover:text-black text-center font-bold transition-all duration-300 flex items-center justify-center gap-2 tr">
+                    <i class="fab fa-whatsapp text-xl"></i> <span data-fr="S'abonner" data-ar="اشترك الآن">S'abonner</span>
+                </a>
+            </div>
+
+            <!-- 3 MOIS -->
+            <div class="glass-card rounded-3xl p-6 flex flex-col hover:border-primary/50 transition-colors" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl font-bold text-gray-300 tr" data-fr="3 MOIS" data-ar="3 أشهر">3 MOIS</h3>
+                    <div class="mt-4 flex justify-center items-end gap-1">
+                        <span class="text-5xl font-black text-white">249</span>
+                        <span class="text-lg font-bold text-gray-500 mb-1">DH</span>
+                    </div>
+                    <div class="text-sm text-green-500 font-bold mt-2 tr" data-fr="Économisez 20 DH" data-ar="وفر 20 درهم">Économisez 20 DH</div>
+                </div>
+                <div class="space-y-4 mb-8 text-sm text-gray-300 flex-1 font-medium">
+                    <div class="flex items-center gap-3"><i class="fas fa-star text-primary"></i> Serveur VIP Anti-Coupure</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> +60,000 Chaînes TV</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> VOD (Films/Séries) 8K</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> Replay & EPG inclus</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> Support Prioritaire 24/7</div>
+                </div>
+                <a href="https://wa.me/212607897541?text=Bonjour%20!%20Je%20veux%20un%20abonnement%20de%203%20Mois%20(249%20DH)." class="w-full py-3 rounded-xl bg-primary/10 border border-primary text-primary hover:bg-primary hover:text-black text-center font-bold transition-all duration-300 flex items-center justify-center gap-2 tr">
+                    <i class="fab fa-whatsapp text-xl"></i> <span data-fr="S'abonner" data-ar="اشترك الآن">S'abonner</span>
+                </a>
+            </div>
+
+            <!-- 12 MOIS (VIP) -->
+            <div class="bg-gradient-to-b from-[#221c00] to-dark border-2 border-primary rounded-3xl p-6 flex flex-col relative transform lg:-translate-y-4 shadow-[0_0_40px_rgba(255,204,0,0.2)] z-10" data-aos="fade-up" data-aos-delay="300">
+                <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary to-primary-dark text-black font-black text-xs tracking-widest uppercase px-6 py-2 rounded-full shadow-lg tr" data-fr="Recommandé" data-ar="يُنصح به">
+                    Recommandé
+                </div>
+                <div class="text-center mb-6 mt-2">
+                    <h3 class="text-xl font-black text-primary tr" data-fr="12 MOIS VIP" data-ar="12 شهر VIP">12 MOIS VIP</h3>
+                    <div class="mt-4 flex justify-center items-end gap-1">
+                        <span class="text-6xl font-black text-white">899</span>
+                        <span class="text-lg font-bold text-gray-400 mb-2">DH</span>
+                    </div>
+                    <div class="text-sm text-primary font-bold mt-2 tr" data-fr="Soit 75 DH / mois " data-ar="أي 75 درهم / شهر ">Soit 75 DH / mois </div>
+                </div>
+                <div class="space-y-4 mb-8 text-sm text-white flex-1 font-medium">
+                    <div class="flex items-center gap-3"><i class="fas fa-star text-primary"></i> Serveur VIP Anti-Coupure</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> +60,000 Chaînes TV</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> VOD (Films/Séries) 8K</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> Replay & EPG inclus</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> Support Prioritaire 24/7</div>
+                </div>
+                <a href="https://wa.me/212607897541?text=Bonjour%20!%20Je%20veux%20un%20abonnement%20VIP%20de%2012%20Mois%20(899%20DH)." class="w-full py-4 rounded-xl bg-primary text-black text-center font-black text-lg btn-glow flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-2xl"></i> <span class="tr" data-fr="S'abonner" data-ar="اشترك الآن">S'abonner</span>
+                </a>
+            </div>
+
+            <!-- 6 MOIS -->
+            <div class="glass-card rounded-3xl p-6 flex flex-col hover:border-primary/50 transition-colors" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl font-bold text-gray-300 tr" data-fr="6 MOIS" data-ar="6 أشهر">6 MOIS</h3>
+                    <div class="mt-4 flex justify-center items-end gap-1">
+                        <span class="text-5xl font-black text-white">449</span>
+                        <span class="text-lg font-bold text-gray-500 mb-1">DH</span>
+                    </div>
+                    <div class="text-sm text-green-500 font-bold mt-2 tr" data-fr="Économisez 90 DH" data-ar="وفر 90 درهم">Économisez 90 DH</div>
+                </div>
+                <div class="space-y-4 mb-8 text-sm text-gray-300 flex-1 font-medium">
+                    <div class="flex items-center gap-3"><i class="fas fa-star text-primary"></i> Serveur VIP Anti-Coupure</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> +60,000 Chaînes TV</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> VOD (Films/Séries) 8K</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> Replay & EPG inclus</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> Support Prioritaire 24/7</div>
+                </div>
+                <a href="https://wa.me/212607897541?text=Bonjour%20!%20Je%20veux%20un%20abonnement%20de%206%20Mois%20(449%20DH)." class="w-full py-3 rounded-xl bg-primary/10 border border-primary text-primary hover:bg-primary hover:text-black text-center font-bold transition-all duration-300 flex items-center justify-center gap-2 tr">
+                    <i class="fab fa-whatsapp text-xl"></i> <span data-fr="S'abonner" data-ar="اشترك الآن">S'abonner</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (QUESTIONS FRÉQUENTES) -->
+    <section id="faq" class="py-24 bg-[#080808] border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-primary font-bold text-sm tracking-[0.2em] uppercase tr" data-fr="Des questions ?" data-ar="لديك أسئلة؟">Des questions ?</span>
+                <h2 class="text-4xl font-black mt-2 tr" data-fr="Questions Fréquentes" data-ar="أسئلة شائعة">Questions Fréquentes</h2>
+            </div>
+
+            <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-item glass-card rounded-2xl border border-white/10">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg tr" data-fr="Ai-je besoin d'une parabole pour utiliser l'IPTV ?" data-ar="هل أحتاج إلى طبق استقبال لاستخدام الـ IPTV؟">Ai-je besoin d'une parabole pour utiliser l'IPTV ?</span>
+                        <i class="fas fa-plus faq-icon text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 leading-relaxed" style="max-height: 0px;">
+                        <p class="pb-5 tr" data-fr="Non, absolument pas ! L'IPTV fonctionne uniquement avec votre connexion internet. Tant que vous avez une connexion stable, vous pouvez profiter de notre service." data-ar="لا، إطلاقاً! يعمل الـ IPTV فقط من خلال اتصالك بالإنترنت. طالما لديك اتصال مستقر، يمكنك الاستمتاع بخدمتنا.">Non, absolument pas ! L'IPTV fonctionne uniquement avec votre connexion internet. Tant que vous avez une connexion stable, vous pouvez profiter de notre service.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card rounded-2xl border border-white/10">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg tr" data-fr="Sur quels appareils puis-je installer 8K STRONG ?" data-ar="على أي أجهزة يمكنني تثبيت 8K STRONG؟">Sur quels appareils puis-je installer 8K STRONG ?</span>
+                        <i class="fas fa-plus faq-icon text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 leading-relaxed" style="max-height: 0px;">
+                        <p class="pb-5 tr" data-fr="Notre IPTV est compatible avec presque tous les appareils : Smart TV, Box Android, Apple TV, Amazon Firestick, Smartphones, et PC/Mac. Nous vous guiderons pour l'installation !" data-ar="خدمتنا متوافقة مع جميع الأجهزة تقريباً: التلفزيونات الذكية، أجهزة الأندرويد بوكس، الهواتف الذكية، والحواسيب. سنرشدك في خطوات التثبيت!">Notre IPTV est compatible avec presque tous les appareils : Smart TV, Box Android, Apple TV, Amazon Firestick, Smartphones, et PC/Mac. Nous vous guiderons pour l'installation !</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card rounded-2xl border border-white/10">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg tr" data-fr="Proposez-vous un test gratuit ?" data-ar="هل تقدمون تجربة مجانية؟">Proposez-vous un test gratuit ?</span>
+                        <i class="fas fa-plus faq-icon text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 leading-relaxed" style="max-height: 0px;">
+                        <p class="pb-5 tr" data-fr="Oui ! Nous proposons un test gratuit de 24h pour que vous puissiez vérifier la qualité de nos serveurs avant d'acheter. Contactez-nous sur WhatsApp." data-ar="نعم! نقدم تجربة مجانية لمدة 24 ساعة لتتمكن من التحقق من جودة سيرفراتنا قبل الشراء. تواصل معنا عبر واتساب.">Oui ! Nous proposons un test gratuit de 24h pour que vous puissiez vérifier la qualité de nos serveurs avant d'acheter. Contactez-nous sur WhatsApp.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card rounded-2xl border border-white/10">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-lg tr" data-fr="Comment se passe le paiement ?" data-ar="كيف تتم عملية الدفع؟">Comment se passe le paiement ?</span>
+                        <i class="fas fa-plus faq-icon text-gray-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 leading-relaxed" style="max-height: 0px;">
+                        <p class="pb-5 tr" data-fr="Nous acceptons plusieurs méthodes (Virement, Wafacash, CashPlus, PayPal). Dès que le paiement est confirmé, vous recevez vos identifiants instantanément." data-ar="نقبل عدة طرق (تحويل بنكي، وفاکاش، كاش بلس، باي بال). بمجرد تأكيد الدفع، تتلقى بيانات الدخول الخاصة بك فوراً.">Nous acceptons plusieurs méthodes (Virement, Wafacash, CashPlus, PayPal). Dès que le paiement est confirmé, vous recevez vos identifiants instantanément.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#050505] pt-16 pb-8 border-t border-white/10 text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <!-- 8K LOGO FOOTER -->
+                    <img src="img/8k logo.webp" alt="8K Logo" class="h-8 invert-white drop-shadow-[0_0_8px_rgba(255,204,0,0.8)]">
+                    <span class="font-black text-lg text-white">STRONG ORIGINAL</span>
+                </div>
+                <!-- DESCRIPTION WAERA BSAF -->
+                <p class="mb-4 text-gray-300 leading-relaxed tr" data-fr="Découvrez la meilleure qualité IPTV sur le marché. Nos serveurs premium vous garantissent une diffusion fluide en 4K et 8K sans aucune coupure. Profitez d'une stabilité absolue, d'une image cristalline et d'un divertissement illimité, avec un support 24/7." data-ar="اكتشف أفضل جودة IPTV في السوق. نضمن لك بثاً سلساً بجودة 4K و 8K بدون أي تقطيع نهائياً. استمتع باستقرار مطلق، صورة نقية جداً، وترفيه لا محدود، مع دعم فني متواجد 24/7.">Découvrez la meilleure qualité IPTV sur le marché. Nos serveurs premium vous garantissent une diffusion fluide en 4K et 8K sans aucune coupure. Profitez d'une stabilité absolue, d'une image cristalline et d'un divertissement illimité, avec un support 24/7.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-wider tr" data-fr="Liens Rapides" data-ar="روابط سريعة">Liens Rapides</h4>
+                <ul class="space-y-3">
+                    <li><a href="#accueil" class="hover:text-primary transition tr" data-fr="Accueil" data-ar="الرئيسية">Accueil</a></li>
+                    <li><a href="#features" class="hover:text-primary transition tr" data-fr="Avantages" data-ar="المميزات">Avantages</a></li>
+                    <li><a href="#plans" class="hover:text-primary transition tr" data-fr="Abonnements" data-ar="الاشتراكات">Abonnements</a></li>
+                    <li><a href="#faq" class="hover:text-primary transition tr" data-fr="FAQ" data-ar="الأسئلة الشائعة">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-wider tr" data-fr="Paiement Sécurisé" data-ar="دفع آمن">Paiement Sécurisé</h4>
+                <div class="flex gap-4 text-2xl">
+                  
+                    <i class="fab fa-cc-visa hover:text-primary transition cursor-pointer"></i>
+                    <i class="fab fa-cc-mastercard hover:text-primary transition cursor-pointer"></i>
+                    <i class="fas fa-money-bill-wave hover:text-primary transition cursor-pointer" title="CashPlus / Wafacash"></i>
+                </div>
+                <div class="mt-6">
+                    <a href="https://wa.me/212607897541" class="inline-flex items-center gap-2 text-green-500 hover:text-green-400 font-bold transition">
+                        <i class="fab fa-whatsapp text-xl"></i> +212 6 07 89 75 41
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center border-t border-white/5 pt-8">
+            <p>© <span id="currentYear"></span> 8K STRONG ORIGINAL. <span class="tr" data-fr="Tous droits réservés." data-ar="جميع الحقوق محفوظة.">Tous droits réservés.</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <script>
+        // 1. Init AOS
+        AOS.init({ once: true, offset: 50, duration: 800 });
+
+        // 2. Swiper VOD 
+        const vodSwiper = new Swiper('.vodSwiper', {
+            slidesPerView: 3, 
+            spaceBetween: 10,
+            loop: true,
+            speed: 3000, 
+            autoplay: { 
+                delay: 0, 
+                disableOnInteraction: false 
+            },
+            breakpoints: {
+                640: { slidesPerView: 4, spaceBetween: 15 },
+                1024: { slidesPerView: 6, spaceBetween: 20 },
+            }
+        });
+
+        // 3. Mobile Menu Logic
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const btnIcon = hamburgerBtn.querySelector('i');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+            if (mobileMenu.classList.contains('translate-x-full')) {
+                btnIcon.classList.remove('fa-times');
+                btnIcon.classList.add('fa-bars');
+            } else {
+                btnIcon.classList.remove('fa-bars');
+                btnIcon.classList.add('fa-times');
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                btnIcon.classList.remove('fa-times');
+                btnIcon.classList.add('fa-bars');
+            });
+        });
+
+        // 4. FAQ Accordion Logic 
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const btn = item.querySelector('.faq-btn');
+            const answer = item.querySelector('.faq-answer');
+            
+            btn.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                faqItems.forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-answer').style.maxHeight = '0px';
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // 5. Compteur Automatique (Stats)
+        const counters = document.querySelectorAll('.counter');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+                    let count = 0;
+                    const updateCount = () => {
+                        const increment = target / 50; 
+                        if (count < target) {
+                            count += increment;
+                            counter.innerText = Math.ceil(count);
+                            setTimeout(updateCount, 40);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => observer.observe(counter));
+
+        // 6. Système de Traduction FR/AR
+        const langFR = document.getElementById('lang-fr');
+        const langAR = document.getElementById('lang-ar');
+        const elementsToTranslate = document.querySelectorAll('.tr');
+
+        function setLang(lang) {
+            elementsToTranslate.forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                if (text) el.innerHTML = text;
+            });
+            
+            document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            
+            if(lang === 'ar') {
+                langAR.classList.replace('text-gray-400', 'text-primary');
+                langFR.classList.replace('text-primary', 'text-gray-400');
+            } else {
+                langFR.classList.replace('text-gray-400', 'text-primary');
+                langAR.classList.replace('text-primary', 'text-gray-400');
+            }
+        }
+
+        langFR.addEventListener('click', () => setLang('fr'));
+        langAR.addEventListener('click', () => setLang('ar'));
+
+        document.getElementById('currentYear').innerText = new Date().getFullYear();
+
+        // 7. ANIMATION AUTOMATIQUE DES ETAPES "COMMENT CA MARCHE"
+        const steps = document.querySelectorAll('.step-card');
+        const circles = document.querySelectorAll('.step-circle');
+        let currentStep = 0;
+
+        setInterval(() => {
+            // Reset ga3 les étapes l'état par défaut
+            steps.forEach(step => {
+                step.classList.remove('scale-105', 'opacity-100');
+                step.classList.add('scale-90', 'opacity-50');
+            });
+            circles.forEach(circle => {
+                circle.classList.remove('bg-primary', 'text-black');
+                circle.classList.add('bg-black', 'text-primary');
+            });
+            
+            // Appliquer l'effet 'active' 3la l'étape jdida
+            steps[currentStep].classList.remove('scale-90', 'opacity-50');
+            steps[currentStep].classList.add('scale-105', 'opacity-100');
+            circles[currentStep].classList.remove('bg-black', 'text-primary');
+            circles[currentStep].classList.add('bg-primary', 'text-black');
+            
+            // Passer l'étape li moraha kola 2.5 secondes
+            currentStep = (currentStep + 1) % steps.length;
+        }, 2500);
+    </script>
+</body>
+</html>
